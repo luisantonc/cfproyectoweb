@@ -12,16 +12,16 @@
         font-size: 62.5%;
         box-sizing: border-box;
         /** Hack para Box Model **/
-       /* scroll-snap-type: y mandatory; */
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
     }
 
-    /** Scroll Snap Esta opcion me gusta sin embargo cuando la aplico muevo el scroll y el movimiento no me convence
     .servicios,
     .navegacion-principal,
     .formulario {
         scroll-snap-align: center;
         scroll-snap-stop: always;
-    } **/
+    }
 
     *,
     *:before,
@@ -225,18 +225,20 @@
         align-items: center;
     }
 
-    /** Transitions **/
+    /** Transitions 
 
-    main.contenedor.sombra .servicios .servicio h3 {
+     h3 {
         font-size: 1.8rem;
         transition: font-size 1s .5s;
     }
 
-    main.contenedor.sombra .servicios .servicio :hover {
-        font-size: 24px;
+    .contenedor .servicio :hover {
+        font-size: 22px;
     }
+**/
 
-    /** Animations **/
+
+    /** Animations Maquina escribir **/
 
     .maquina-escribir {
         position: relative;
@@ -264,20 +266,17 @@
         }
     }
 
+    /** Animation iconos SVG **/
 
-    section.servicio .iconos svg {
+    section svg {
         animation-duration: 1s;
-        cursor: pointer;
-        animation-iteration-count: 3s;
-        animation-timing-function: cubic-bezier(.77, .28, .42, .93);
-        transition: 2s;
 
     }
 
-    section.servicio .iconos svg:hover{
+    section svg:hover {
         animation-name: rotate;
-      
-    } 
+
+    }
 
     @keyframes rotate {
         0% {
@@ -289,24 +288,7 @@
         }
     }
 
-    /*@keyframes rotate {
-    0% {
-        transform: translateY(-5%);
-    }
-    100% {
-        transform: translateY(5%);
-    }
-} */
 
-    @keyframes scale {
-        0% {
-            transform: scale(.75);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-    }
 
     /** Contacto **/
     .formulario {
